@@ -15,7 +15,7 @@
 
 # 前端
 
-* [前端性能优化の备忘录(2018版)](https://www.smashingmagazine.com/2018/01/front-end-performance-checklist-2018-pdf-pages/) ([w3ctech编辑部](https://www.w3ctech.com)、[YY营收前端组](https://www.yy.com)翻译)
+* [front-end-performance-checklist-2018-pdf-pages](https://www.smashingmagazine.com/2018/01/front-end-performance-checklist-2018-pdf-pages/) ([w3ctech编辑部](https://www.w3ctech.com)、[YY营收前端组](https://www.yy.com)翻译)
 * [所有前端译文>>](https://github.com/w3ctech-editorial-department/translate/blob/master/front-end.md)
 
 # Copyright
