@@ -1,1 +1,1 @@
-- [前端性能优化の备忘录（2018版）](https://www.w3ctech.com/topic/2089)
+- 前端性能优化の备忘录（2018版）[[w3ctech 版本](https://www.w3ctech.com/topic/2089)] [[md 版本](https://github.com/w3ctech-editorial-department/translate/blob/master/todo/front-end-performance-checklist-2018-pdf-pages-2018-01-04.md)]
