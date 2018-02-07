@@ -4,7 +4,7 @@
 
 ![smashingmagazine](https://img.w3ctech.com/character-15.png)
 
-性能（优化）的重要性，想必大家心里都有点 B 数，对吧。不过我想问的是，大家是否真的知道啥是性能瓶颈呢？JS 文件的体积过大（expensive JavaScript），web 字体的下载速度过慢（slow web font delivery），图片的尺寸过大（heavy images），渲染的速度过慢（sluggish rendering）等因素是不是诱发性能瓶颈的原因呢？（性能优化）是否值得你去实践 [tree-shaking](https://doc.webpack-china.org/guides/tree-shaking/)、[scope hoisting](https://zhuanlan.zhihu.com/p/27980441)、[code-splitting](https://doc.webpack-china.org/guides/code-splitting/) 以及其它的载入技巧（包括 [intersection observer](https://www.w3.org/TR/intersection-observer/)、[clients hints](https://github.com/igrigorik/http-client-hints)、[CSS containment](https://www.w3.org/TR/css-contain-1/)、[HTTP/2](https://http2.github.io/)、[service workers](https://www.w3.org/TR/service-workers-1/)）呢？（抛开上面提到的一些问题，我觉得）最为重要的一点，**大家是否知道性能优化从何开始**以及能否树立长期的性能优化意识？（And, most importantly, where do we even start improving performance and how do we establish a performance culture long-term?）。
+性能（优化）的重要性，想必大家心里都有点 B 数，对吧。不过我想问的是，大家是否真的知道啥是性能瓶颈呢？JS 文件的体积过大（expensive JavaScript），web 字体的下载速度过慢（slow web font delivery），图片的尺寸过大（heavy images），渲染的速度过慢（sluggish rendering）等因素是不是诱发性能瓶颈的原因呢？（性能优化）是否值得你去实践 [tree-shaking](https://doc.webpack-china.org/guides/tree-shaking/)、[scope hoisting](https://zhuanlan.zhihu.com/p/27980441)、[code-splitting](https://doc.webpack-china.org/guides/code-splitting/) 以及其它的载入技巧（包括 [intersection observer](https://www.w3.org/TR/intersection-observer/)、[clients hints](https://github.com/igrigorik/http-client-hints)、[CSS containment](https://www.w3.org/TR/css-contain-1/)、[HTTP/2](https://http2.github.io/)、[service workers](https://www.w3.org/TR/service-workers-1/)）呢？（抛开上面提到的一些问题，我觉得）最为重要的一点，**大家是否知道性能优化从何开始**以及知道如何树立长期的性能优化意识？（And, most importantly, where do we even start improving performance and how do we establish a performance culture long-term?）。
 
 在以前（Back in the day），大家对性能优化总是摆出一副“秋后算账”（a mere afterthought）的样子。（举个栗子），就算它的工作内容只是对资源进行压缩、合并、优化或者对服务器配置文件（的配置项）做一些微调，（万万没想到的是），大家还是习惯性地把（针对性能优化的）排期拖到项目末尾。现在我们再回过头看，性能优化似乎变得更加重要啦。
 
@@ -35,7 +35,7 @@
 
 而且，正如 Patrick Meenan 所建议的那样，在设计（资源载入环节）的过程中，**知道如何规划好（plan out）资源之间的载入顺序以及知道这些顺序之间的权衡利弊（trade-offs），真的是很有必要**。（为啥呢？试想一下），假设在项目开始之前，你就针对一些比较重要的环节（part）来排优先级，并且还确定了这些环节的出场顺序。（那么，自然而然），你也就知道有哪些环节可以被 delay 啦。顺利的话（Ideally），也是能够从这些环节的出场顺序看出（reflect ） CSS 和 JavaScript 的引入顺序。如果真是酱紫的话，在今后的项目构建过程中，CSS 以及 JavaScript 的处理，将会变得容易多啦。当然，你也可以去考虑究竟啥样的视觉体验才是介于好与坏之间的“中间状态”，前提是，你的页面正处于 loaded 状态（比如，页面的 web 字体还未载入）。
 
-规划、规划、规划，重要的事情说三遍！为啥呢？这是因为，对性能提前做好规划，可以让你（在真的遇到性能问题的时候）做到“手到擒来”（low-hanging-fruits），并且最终还可能也会演变成快速制胜的法宝（strategy）。不过话说回来，在没有做好规划、（公司层面的）优化目标被设置的不合理以及的背景下，还能够把性能的优先级摆在第一位，其实是很难的。
+规划、规划、规划，重要的事情说三遍！为啥呢？这是因为，对性能提前做好规划，可以让你（在真的遇到性能问题的时候）做到“手到擒来”（low-hanging-fruits），并且最终还可能会演变成快速制胜的法宝（strategy）。不过话说回来，在没有做好规划、（公司层面的）优化目标被设置的不合理的背景下，还能够把性能的优先级摆在第一位，其实是很难的。
 ### 选择正确的指标（Choose the right metrics）
 
 [不是所有的指标都同样重要](https://speedcurve.com/blog/rendering-metrics/)。研究最影响应用的指标：通常，这与开始渲染最重要部分的速度（以及它们是什么）和提供的输入响应速度有关。这些将会给出最佳的优化目标。通过各种方式，而不是只关注于整个页面的加载时间（例如 onLoad 和 DOMContentLoaded 时间），优先加载用户能感知到的页面变化。这意味着要关注[一些不同的指标](https://docs.google.com/presentation/d/1D4foHkE0VQdhcA5_hiesl8JhEGeTDRrQR4gipfJ8z7Y/present?slide=id.g21f3ab9dd6_0_33)，事实上，选择正确的指标并不容易。
@@ -250,7 +250,7 @@ JavaScript有成本，但并不一定是指性能上消耗的文件大小。解�
 
 ### 你会合理优化图片吗？（Are images properly optimized?）
 
-尽可能使用具有srcset，sizes和<picture>元素的响应式图片。 您可以通过为WebP图像提供<picture>元素和JPEG回退（请参阅Andreas Bovens的代码片段），或者通过内容协商（使用Accept头），来使用WebP格式（即将在Chrome，Opera，Firefox中支持）。Sketch本身支持WebP，并且可以使用Photoshop的WebP插件从Photoshop导出WebP图像。其他选项也可用。如果您使用的是WordPress或Joomla，可以使用扩展来帮助您轻松实现对WebP的支持，例如WordPress的Optimus和Cache Enabler以及Joomla自身已支持的扩展（通过Cody Arsenault）。您也可以使用客户端提示，但仍需要获得一些浏览器支持。 在复杂的标记下没有足够的资源去实现响应式图像？ 使用响应式图像断点生成器或Cloudinary等服务自动进行图像优化。 而且，在许多情况下，单独使用srcset和size将会获得显着的好处。在Smashing杂志上，我们使用postfix -opt作为图像名称，例如brotli-compression-opt.png; 每当图像包含该后缀时，团队中的每个人都知道图像已经被优化。
+尽可能使用具有srcset，sizes和`<picture>`元素的响应式图片。 您可以通过为WebP图像提供`<picture>`元素和JPEG回退（请参阅Andreas Bovens的代码片段），或者通过内容协商（使用Accept头），来使用WebP格式（即将在Chrome，Opera，Firefox中支持）。Sketch本身支持WebP，并且可以使用Photoshop的WebP插件从Photoshop导出WebP图像。其他选项也可用。如果您使用的是WordPress或Joomla，可以使用扩展来帮助您轻松实现对WebP的支持，例如WordPress的Optimus和Cache Enabler以及Joomla自身已支持的扩展（通过Cody Arsenault）。您也可以使用客户端提示，但仍需要获得一些浏览器支持。 在复杂的标记下没有足够的资源去实现响应式图像？ 使用响应式图像断点生成器或Cloudinary等服务自动进行图像优化。 而且，在许多情况下，单独使用srcset和size将会获得显着的好处。在Smashing杂志上，我们使用postfix -opt作为图像名称，例如brotli-compression-opt.png; 每当图像包含该后缀时，团队中的每个人都知道图像已经被优化。
 
 ![The Responsive Image Breakpoints Generator automates images and markup generation](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_2000/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/db62c469-bbfc-4959-839d-590abb41b64e/responsive-breakpoints-opt.png)
 
@@ -348,3 +348,5 @@ WOFF2的支持非常好，对于不支持WOFF2的浏览器，你可以使用WOFF
 一般来说，[WebPageTest](http://www.webpagetest.org/) 测试环境的部署，有助于快速构建出多个测试用例。然而，对于工具（指的是能够持续监控、自动报警的工具）来说，能够带给你的，将会是更多有关于性能细节的画面。（所以你需要做的事是），在需要对（与业务相关的）指标进行监控的情况下，设置自定义的标记。当然，你也可以考虑添加[性能回归自动报警（automated performance regression alerts）](https://calendar.perfplanet.com/2017/automating-web-performance-regression-alerts/)机制（能够帮助监测指标的变化情况）。
 
 （调研之后，你会发现）：其实是可以使用 [RUM](https://smartbear.com/learn/performance-monitoring/what-is-real-user-monitoring/) 的方式来帮忙监测性能的变化情况。至于有哪些测试工具可以被用于自动化单元测试，推荐你去使用 [k6](https://github.com/loadimpact/k6)（配合它的 API 使用，效果更佳）。当然你也可以去体验 [SpeedTracker](https://speedtracker.org/)、[Lighthouse](https://github.com/GoogleChrome/lighthouse) 以及 [Calibre](https://calibreapp.com/) 工具
+
+
