@@ -106,3 +106,17 @@
 **注意**：FID 指标以及 TTI 指标，这两者指标都不会考虑滚动这种交互行为；另外，滚动这种交互行为可以独立进行 — 因为它不在主线程所管辖的范围里面，对于很多主打内容消费的网站来说，这些指标就显得不那么重要（感谢，Patrick！）
 
 [![User-centric performance metrics provide a better insight into the actual user experience. First Input Delay (FID) is a new metric that tries to achieve just that](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_2000/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/5d80f91c-9807-4565-b616-a4735fcd4949/network-requests-first-input-delay.png)](https://twitter.com/__treo/status/1068163152783835136)
+
+### 收集用户设备上的数据（Gather data on a device representative of your audience）
+
+为了收集到准确的数据，我们需要仔细地挑选测试设备。[选择 Moto G4](https://twitter.com/katiehempenius/statuses/1067969800205422593)、
+
+[![Introducing the slowest day of the week. Facebook has introduced 2G Tuesdays to increase visibility and sensitivity of slow connections](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_800/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/dfe1a4ec-2088-4e39-8a39-9f2010380a53/tuesday-2g-opt.png)](https://www.theverge.com/2015/10/28/9625062/facebook-2g-tuesdays-slow-internet-developing-world)
+
+[![Lighthouse, a performance auditing tool integrated into DevTools](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_2000/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/a85a91a7-fb37-4596-8658-a40c1900a0d6/lighthouse-screenshot.png)](https://developers.google.com/web/tools/lighthouse/)
+
+### 收集用户设备上的数据（Set up "clean" and "customer" profiles for testing）
+
+### 给你的同事安利前端性能优化の备忘录（Share the checklist with your colleagues）
+
+## 设立合理的目标（Setting Realistic Goals）
