@@ -1,5 +1,7 @@
 # 前端性能优化の备忘录（2018版）
 
+[原文链接](https://www.smashingmagazine.com/2018/01/front-end-performance-checklist-2018-pdf-pages)
+
 ![Performance](https://img.w3ctech.com/p.png)
 
 ![smashingmagazine](https://img.w3ctech.com/character-15.png)
